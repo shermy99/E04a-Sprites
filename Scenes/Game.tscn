@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Assets/male_jump.png" type="Texture" id=1]
+[ext_resource path="res://Assets/femaleAdventurer_jump.png" type="Texture" id=2]
 
 [sub_resource type="PhysicsMaterial" id=1]
 friction = 0.2
@@ -35,3 +36,15 @@ polygon = PoolVector2Array( 0, 0, 0, 608, 1024, 608, 1024, -32, 1088, -32, 1088,
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Walls"]
 polygon = PoolVector2Array( 0, 0, 1024, 0, 1024, -32, 0, -32 )
+
+[node name="Falling 2" type="RigidBody2D" parent="."]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Falling 2"]
+scale = Vector2( 0.2, 0.2 )
+
+[node name="femaleAdventurer_jump" type="Sprite" parent="Falling 2/Sprite"]
+position = Vector2( 24, 2 )
+texture = ExtResource( 2 )
